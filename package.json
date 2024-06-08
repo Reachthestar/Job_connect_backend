@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,10 @@
   },
   "dependencies": {
     "@prisma/client": "5.15.0",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
-    "job-connect-back-end": "link:"
+    "express": "^4.19.2",
+    "job-connect-back-end": "link:",
+    "jsonwebtoken": "^9.0.2"
   }
 }
