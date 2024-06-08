@@ -60,7 +60,7 @@ authController.login = async (req, res, next) => {
 };
 
 authController.getMe = (req, res, next) => {
-  res.send('get me');
+  res.status(200).json({ user: req.user });
 };
 
 module.exports = authController;
