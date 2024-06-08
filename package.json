@@ -1,0 +1,20 @@
+{
+  "name": "job-connect-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^5.15.0"
+  },
+  "dependencies": {
+    "@prisma/client": "5.15.0",
+    "dotenv": "^16.4.5",
+    "job-connect-back-end": "link:"
+  }
+}
