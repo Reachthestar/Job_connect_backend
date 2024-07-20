@@ -18,7 +18,7 @@ model User {
   lastName           String
   email              String    @unique @db.VarChar(50)
   password           String    @db.VarChar(256)
-  phone              String?   @unique @db.VarChar(20)
+  phone              String?   @db.VarChar(20)
   province           String?   @db.VarChar(50)
   city               String?   @db.VarChar(50)
   jobTitle           String?   @db.VarChar(100)

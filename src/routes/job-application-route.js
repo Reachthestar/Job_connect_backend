@@ -6,5 +6,17 @@ jobApplicationRouter.post(
   '/create',
   jobApplicationController.createJobApplication
 );
+jobApplicationRouter.get(
+  '/',
+  jobApplicationController.getAllJobsApplicationByUserId
+);
+jobApplicationRouter.get(
+  '/:jobId',
+  jobApplicationController.getJobAndApplicantByJobId
+);
+jobApplicationRouter.delete(
+  '/:applicationId',
+  jobApplicationController.deleteApplicationByApplicationId
+);
 
 module.exports = jobApplicationRouter;

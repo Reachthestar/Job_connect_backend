@@ -2,10 +2,19 @@ const prisma = require('../models/prisma');
 
 const jobApplicationService = {};
 
-jobApplicationService.createJobApplication = (userId, jobId, status) =>
-  prisma.application.create({ data: { id: userId, jobId, status } });
+jobApplicationService.createJobApplication = (data) =>
+  prisma.application.create({ data });
 
-// jobApplicationService.findJobApplicationByUserId = (userId) =>
-//   prisma.application.findFirst({ where: { id: userId } });
+jobApplicationService.findJobApplicationByUserId = (userId) =>
+  prisma.application.findMany({
+    where: { userId },
+    include: { job: true },
+  });
+
+jobApplicationService.findJobApplicationByApplicationId = (applicationId) =>
+  prisma.application.findFirst({ where: { id: applicationId } });
+
+jobApplicationService.deleteApplicationById = (applicationId) =>
+  prisma.application.delete({ where: { id: applicationId } });
 
 module.exports = jobApplicationService;
